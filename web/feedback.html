@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback - Glow Skin Care</title>
+  <link rel="stylesheet" href="feedback.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Glow Skin Care</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+        <li><a href="feedback.html" class="active">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="feedback-section">
+    <h1>Share Your Glow Story</h1>
+    <p class="subheading">Your feedback means the world to us</p>
+
+    <div class="feedback-container">
+      
+      <form class="feedback-form" onsubmit="addFeedback(event)">
+        <input type="text" id="name" placeholder="👤 Your Name" required>
+        <input type="email" id="email" placeholder="📧 Your Email" required>
+        <textarea id="message" rows="5" placeholder="📝 Write your feedback..." required></textarea>
+        <button type="submit">Submit Feedback</button>
+      </form>
+
+      <div class="testimonials" id="testimonial-list">
+        <div class="testimonial">
+          <p>“Absolutely love the facial treatments!”</p>
+          <span>– Priya</span>
+        </div>
+        <div class="testimonial">
+          <p>“My skin has never felt better!”</p>
+          <span>– Anjali</span>
+        </div>
+        <div class="testimonial">
+          <p>“Relaxing and professional experience.”</p>
+          <span>– Sneha</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function addFeedback(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (name && message) {
+        const newTestimonial = document.createElement('div');
+        newTestimonial.className = 'testimonial';
+        newTestimonial.innerHTML = `<p>“${message}”</p><span>– ${name}</span>`;
+
+        document.getElementById('testimonial-list').prepend(newTestimonial);
+        e.target.reset();
+      }
+    }
+  </script>
+
+</body>
+</html>

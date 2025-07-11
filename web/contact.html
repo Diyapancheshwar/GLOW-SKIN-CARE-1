@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Glow Skin Care</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Glow Skin Care</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+         <li><a href="about.html">About</a></li>
+        <!-- <li><a href="feedback.html">Feedback</a></li>-->
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+         <li><a href="feedback.html">Feedback</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-wrapper">
+    <div class="contact-card animate">
+      <h1>Get in Touch</h1>
+      <p>We’d love to hear from you. Fill out the form and we’ll get back to you soon.</p>
+
+          <form action="ContactServlet" method="post" class="contact-form">
+        <div class="input-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required />
+        </div>
+        <div class="input-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@gmail.com" required />
+        </div>
+        <div class="input-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <a href="https://wa.me/919999999999" class="whatsapp" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp"/>
+  </a>
+
+</body>
+</html>
